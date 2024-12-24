@@ -1,0 +1,9 @@
+{
+	"name": "Airlinesproject",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "018ec412-229a-45d5-9a3a-f8f4490f4846",
+		"tenantId": "3d8ff5e6-de45-4568-b852-44e71d23d415"
+	}
+}
