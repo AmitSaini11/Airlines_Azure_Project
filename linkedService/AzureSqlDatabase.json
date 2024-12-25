@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDatabase",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "airlnesserver.database.windows.net",
+			"database": "Airline_database",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "airlinesserveradmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDk3Q0YyNDc3LUE3Q0UtNDQ5MS04NTAzLTUxNUZGQzFERkY2Q19iZTgyZjI4Yy1iZDA4LTQ1NjUtYjVlZC01ZjhkYmEzODg2YTYiDQp9"
+		}
+	}
+}
