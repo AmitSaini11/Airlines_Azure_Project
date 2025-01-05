@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Airlinesproject"
+		},
+		"AzureDataLakeStorageGen1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorageGen2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorageGen1_properties_typeProperties_url": {
+			"value": "https://airlinesstorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorageGen2_properties_typeProperties_url": {
+			"value": "https://airlinesstoragegen2.dfs.core.windows.net/"
+		},
+		"AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://airlineskeyvalult.vault.azure.net/"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "airlnesserver.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "Airline_database"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "airlinesserveradmin"
+		}
+	}
+}
