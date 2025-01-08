@@ -84,6 +84,10 @@
 										"container": {
 											"value": "@item().container_sink",
 											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().directory_sink",
+											"type": "Expression"
 										}
 									}
 								}
