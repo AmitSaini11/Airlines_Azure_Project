@@ -107,6 +107,10 @@
 										"directory": {
 											"value": "@item().directory_source",
 											"type": "Expression"
+										},
+										"filename": {
+											"value": "@item().File_name_source",
+											"type": "Expression"
 										}
 									}
 								}
