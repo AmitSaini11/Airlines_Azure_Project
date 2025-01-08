@@ -98,7 +98,13 @@
 							"inputs": [
 								{
 									"referenceName": "DataSet_Sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@item().container_source",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
