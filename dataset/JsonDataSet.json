@@ -12,7 +12,9 @@
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "Table_Source_Datalake.json",
+				"fileSystem": "manualfiles"
 			}
 		},
 		"schema": {}
