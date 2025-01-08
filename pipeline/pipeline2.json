@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false
@@ -47,7 +47,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText_source",
+						"referenceName": "DelimitedTextSink",
 						"type": "DatasetReference"
 					}
 				]
