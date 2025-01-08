@@ -98,7 +98,17 @@
 							"inputs": [
 								{
 									"referenceName": "DataSet_Source",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@item().container_source",
+											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().directory_source",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
