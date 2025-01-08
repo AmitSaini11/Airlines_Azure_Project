@@ -88,6 +88,10 @@
 										"directory": {
 											"value": "@item().directory_sink",
 											"type": "Expression"
+										},
+										"filename": {
+											"value": "@item().File_name_sink",
+											"type": "Expression"
 										}
 									}
 								}
