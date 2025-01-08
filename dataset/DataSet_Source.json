@@ -1,5 +1,5 @@
 {
-	"name": "JsonDataSet",
+	"name": "DataSet_Source",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorageGen2",
@@ -9,12 +9,16 @@
 			"name": "Source_DataSet"
 		},
 		"annotations": [],
-		"type": "Json",
+		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation"
-			}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
 		},
-		"schema": {}
+		"schema": []
 	}
 }
