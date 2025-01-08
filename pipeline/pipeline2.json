@@ -79,7 +79,13 @@
 							"inputs": [
 								{
 									"referenceName": "Flight_Data_Set_Sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@item().container_sink",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
