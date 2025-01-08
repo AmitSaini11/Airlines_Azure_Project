@@ -29,7 +29,8 @@
 					"dataset": {
 						"referenceName": "JsonDataSet",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -101,15 +102,15 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
-											"value": "@item().container_source",
+											"value": "@item().container",
 											"type": "Expression"
 										},
 										"directory": {
-											"value": "@item().directory_source",
+											"value": "@item().directory",
 											"type": "Expression"
 										},
 										"filename": {
-											"value": "@item().File_name_source",
+											"value": "@item().filename",
 											"type": "Expression"
 										}
 									}
@@ -120,9 +121,18 @@
 									"referenceName": "DataSet_Sink",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "@item().container_sink",
-										"directory": "@item().directory_sink",
-										"filename": "@item().File_name_sink"
+										"container": {
+											"value": "@item().container",
+											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().directory",
+											"type": "Expression"
+										},
+										"filename": {
+											"value": "@item().filename",
+											"type": "Expression"
+										}
 									}
 								}
 							]
