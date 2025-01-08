@@ -74,25 +74,41 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "Flight_Data_Set_Sink",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Flight_Data_Set_Sink",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": {
-											"value": "@item().container_sink",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@item().directory_sink",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "@item().File_name_sink",
-											"type": "Expression"
-										}
+										"container": "@item().container_sink",
+										"directory": "@item().directory_sink",
+										"filename": "@item().File_name_sink"
 									}
 								}
 							]
