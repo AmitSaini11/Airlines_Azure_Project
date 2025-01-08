@@ -53,11 +53,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"container": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
