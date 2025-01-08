@@ -97,13 +97,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "Flight_Data_Set_Sink",
+									"referenceName": "DataSet_Sink",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "Flight_Data_Set_Sink",
+									"referenceName": "DataSet_Sink",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "@item().container_sink",

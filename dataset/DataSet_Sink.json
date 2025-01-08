@@ -1,5 +1,5 @@
 {
-	"name": "Flight_Data_Set_Sink",
+	"name": "DataSet_Sink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorageGen2",
@@ -17,7 +17,7 @@
 			}
 		},
 		"folder": {
-			"name": "Flight_Destination_DataSet"
+			"name": "Destination_DataSet"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
