@@ -97,14 +97,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DataSet_Sink",
-									"type": "DatasetReference",
-									"parameters": {
-										"container": {
-											"value": "@item().container_source",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DataSet_Source",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
