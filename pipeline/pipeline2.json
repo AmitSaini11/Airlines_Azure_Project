@@ -103,7 +103,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedTextSink",
+									"referenceName": "DataSet_Sink",
 									"type": "DatasetReference"
 								}
 							]
