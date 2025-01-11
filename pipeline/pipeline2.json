@@ -118,7 +118,17 @@
 							"outputs": [
 								{
 									"referenceName": "DataSet_Sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@item().container_sink",
+											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().directory_sink",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
