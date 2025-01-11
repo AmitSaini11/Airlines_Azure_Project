@@ -109,7 +109,7 @@
 											"type": "Expression"
 										},
 										"filename": {
-											"value": "@item().File_name_sink",
+											"value": "@item().File_name_source",
 											"type": "Expression"
 										}
 									}
