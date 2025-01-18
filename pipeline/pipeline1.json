@@ -49,9 +49,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LookupMeataSQL').output.value",
+						"value": "@activity('LookupMeataSQL').output.firstRow",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Copy data1",
