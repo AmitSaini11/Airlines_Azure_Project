@@ -49,7 +49,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@if(contains(activity('LookupMeataSQL').output, 'value'), length(activity('LookupMeataSQL').output.value), 1)\n",
+						"value": "@if(not(empty(activity('LookupMeataSQL').output.firstRow)), 1, 0)\n",
 						"type": "Expression"
 					},
 					"isSequential": false,
