@@ -48,6 +48,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@if(\ncontains(activity('LookupMeataSQL').output, 'value'), \n    if(equals(type(activity('LookupMeataSQL').output.value), 'Array'), length(activity('LookupMeataSQL').output.value), activity('LookupMeataSQL').output.value),\n    if(not(empty(activity('LookupMeataSQL').output.firstRow)), 1, 0)\n) ",
+						"type": "Expression"
+					},
 					"isSequential": false,
 					"activities": [
 						{
