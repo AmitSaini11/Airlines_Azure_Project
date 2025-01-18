@@ -49,7 +49,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LookupMeataSQL').output.firstRow",
+						"value": "@activity('LookupMeataSQL').output.value",
 						"type": "Expression"
 					},
 					"isSequential": false,
