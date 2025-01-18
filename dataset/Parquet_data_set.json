@@ -13,6 +13,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@item().filename_sink",
+					"type": "Expression"
+				},
 				"folderPath": {
 					"value": "@concat(item().filename_sink,'/Date_Part=',formatDateTime(utcnow(),'yyyy-MM-dd'))",
 					"type": "Expression"
