@@ -28,7 +28,10 @@
 					},
 					"dataset": {
 						"referenceName": "json_dataset_sql",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Table_Source_SQL.json"
+						}
 					}
 				}
 			}
