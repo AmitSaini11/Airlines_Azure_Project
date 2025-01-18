@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"container": {
-				"type": "string"
-			},
 			"filename": {
 				"type": "string"
 			}
@@ -25,10 +22,7 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"fileSystem": {
-					"value": "@dataset().container",
-					"type": "Expression"
-				}
+				"fileSystem": "manualfiles"
 			}
 		},
 		"schema": {}
