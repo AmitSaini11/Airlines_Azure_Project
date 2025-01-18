@@ -5,8 +5,13 @@
 			"referenceName": "AzureDataLakeStorageGen2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"container": {
+				"type": "string"
+			}
+		},
 		"folder": {
-			"name": "Source_DataSet"
+			"name": "Destination_DataSet"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
