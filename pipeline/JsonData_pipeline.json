@@ -69,25 +69,17 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "DelimitedTextSource",
-									"storeSettings": {
-										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
-									},
-									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
-									}
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"type": "ParquetWriteSettings"
 									}
 								},
 								"enableStaging": false,
@@ -102,15 +94,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText_source",
+									"referenceName": "AzureSqlDatabse_source",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": {
+										"tablename": {
 											"value": "@item().tablename_source",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "@item().filename_sink",
 											"type": "Expression"
 										}
 									}
@@ -118,22 +106,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DataSet_Sink",
-									"type": "DatasetReference",
-									"parameters": {
-										"container": {
-											"value": "@item().container_sink",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@item().directory_sink",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "@item().File_name_sink",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "Parquet_data_set",
+									"type": "DatasetReference"
 								}
 							]
 						}
