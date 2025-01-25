@@ -27,8 +27,11 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "JsonDataSet",
-						"type": "DatasetReference"
+						"referenceName": "json_dataset_sql",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Table_Source_SQL.json"
+						}
 					},
 					"firstRowOnly": false
 				}
@@ -103,15 +106,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
-											"value": "@item().container_source",
-											"type": "Expression"
-										},
-										"directory": {
-											"value": "@item().directory_source",
+											"value": "@item().tablename_source",
 											"type": "Expression"
 										},
 										"filename": {
-											"value": "@item().File_name_source",
+											"value": "@item().filename_sink",
 											"type": "Expression"
 										}
 									}
