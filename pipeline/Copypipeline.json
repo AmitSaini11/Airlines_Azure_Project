@@ -86,7 +86,17 @@
 							"inputs": [
 								{
 									"referenceName": "fetchingAWTables",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"schema": {
+											"value": "@item().schemaname",
+											"type": "Expression"
+										},
+										"tablename": {
+											"value": "@item().tablename",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
