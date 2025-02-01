@@ -1,0 +1,29 @@
+{
+	"name": "salesawallparquets",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageGen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().Filename",
+					"type": "Expression"
+				},
+				"folderPath": "BronzeLayer",
+				"fileSystem": "salesawproject"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

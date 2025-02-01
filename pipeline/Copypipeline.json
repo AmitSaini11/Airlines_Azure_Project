@@ -65,14 +65,12 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"type": "ParquetWriteSettings"
 									}
 								},
 								"enableStaging": false,
@@ -93,8 +91,14 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DataSet_Sink",
-									"type": "DatasetReference"
+									"referenceName": "salesawallparquets",
+									"type": "DatasetReference",
+									"parameters": {
+										"Filename": {
+											"value": "@item().tablename",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
