@@ -1,0 +1,6 @@
+{
+	"name": "SalesAWSelfIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
