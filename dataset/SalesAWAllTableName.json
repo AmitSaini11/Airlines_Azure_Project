@@ -1,0 +1,12 @@
+{
+	"name": "SalesAWAllTableName",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sales_AW_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
