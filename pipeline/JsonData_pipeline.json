@@ -69,7 +69,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "AzureSqlSource",
+									"type": "SqlServerSource",
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
@@ -94,11 +94,15 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlDatabse_source",
+									"referenceName": "fetchingAWTables",
 									"type": "DatasetReference",
 									"parameters": {
+										"schema": {
+											"value": "@item().schemaname",
+											"type": "Expression"
+										},
 										"tablename": {
-											"value": "@item().tablename_source",
+											"value": "@item().tablename",
 											"type": "Expression"
 										}
 									}
@@ -106,7 +110,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Parquet_data_set",
+									"referenceName": "salesawallparquets",
 									"type": "DatasetReference"
 								}
 							]
