@@ -1,6 +1,17 @@
 {
 	"name": "pipeline2",
 	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"batchCount": 4
+				}
+			}
+		],
 		"annotations": []
 	}
 }
