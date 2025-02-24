@@ -27,7 +27,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"partitionOption": "PhysicalPartitionsOfTable"
 					},
 					"enableStaging": false
 				},
