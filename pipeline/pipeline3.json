@@ -15,8 +15,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "PhysicalPartitionsOfTable"
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSqlDatabse_source",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
